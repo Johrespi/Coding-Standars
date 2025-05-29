@@ -55,14 +55,17 @@ class Student:
         print("Final Grade = " + str(self.calculate_average()))
 
 
-def startrun():
-    a = student("x", "")
-    a.addGrades(100)
-    a.addGrades("Fifty")  # broken
-    a.calcaverage()
-    a.checkHonor()
-    a.deleteGrade(5)  # IndexError
-    a.report()
+def start_run():
+    """
+    Main function to run the student grade management system.
+    """
+    student = Student("x", "")
+    student.add_grades(100)
+    student.add_grades("Fifty")  # broken
+    student.calculate_average()
+    student.check_honor()
+    student.delete_grade(5)  # IndexError
+    student.report()
 
 
-startrun()
+start_run()
