@@ -39,8 +39,11 @@ class Student:
         if self.calculate_average() > 90:
             self.honor = "yep"
 
-    def deleteGrade(self, index):
-        del self.gradez[index]
+    def delete_grade(self, index):
+        """
+        Delete a grade from the student's record by index.
+        """
+        del self.grades[index]
 
     def report(self):  # broken format
         print("ID: " + self.id)
