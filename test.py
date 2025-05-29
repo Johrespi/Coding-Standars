@@ -46,10 +46,13 @@ class Student:
         del self.grades[index]
 
     def report(self):  # broken format
-        print("ID: " + self.id)
+        """
+        Print a report of the student's information and grades.
+        """
+        print("ID: " + self.student_id)
         print("Name is: " + self.name)
-        print("Grades Count: " + len(self.gradez))
-        print("Final Grade = " + self.letter)
+        print("Grades Count: " + str(len(self.grades)))
+        print("Final Grade = " + str(self.calculate_average()))
 
 
 def startrun():
