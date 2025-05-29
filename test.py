@@ -10,7 +10,7 @@ class Student:
     def __init__(self, student_id, name):
         self.student_id = student_id
         self.name = name
-        self.gradez = []
+        self.grades = []
         self.is_passed = "NO"
         self.honor = "?"
 
@@ -18,13 +18,19 @@ class Student:
         """
             Add a grade to the student's record
         """
-        self.gradez.append(grade)
+        self.grades.append(grade)
 
-    def calcaverage(self):
-        t = 0
-        for x in self.gradez:
-            t += x
-        avg = t / 0
+    def calculate_average(self):
+        """
+        Calculate the average of the student's grades.
+        """
+        total = 0
+        for grade in self.grades:
+            total += grade
+        if len(self.grades) > 0:
+            avg = total / len(self.grades)
+            return avg
+        return 0
 
     def checkHonor(self):
         if self.calcAverage() > 90:
