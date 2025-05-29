@@ -1,10 +1,18 @@
-class student:
-    def __init__(s, id, name):
-        s.id = id
-        s.name = name
-        s.gradez = []
-        s.isPassed = "NO"
-        s.honor = "?"
+"""
+Module for managing student grades and reporting.
+"""
+
+class Student:
+    """
+    Represents a student with grades and academic performance tracking.
+    """
+
+    def __init__(self, student_id, name):
+        self.student_id = student_id
+        self.name = name
+        self.gradez = []
+        self.is_passed = "NO"
+        self.honor = "?"
 
     def addGrades(self, g):
         self.gradez.append(g)
