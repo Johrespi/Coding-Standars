@@ -32,8 +32,11 @@ class Student:
             return avg
         return 0
 
-    def checkHonor(self):
-        if self.calcAverage() > 90:
+    def check_honor(self):
+        """
+            Check if the student qualifies for honors based on average grade.
+        """
+        if self.calculate_average() > 90:
             self.honor = "yep"
 
     def deleteGrade(self, index):
