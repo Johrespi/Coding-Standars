@@ -14,8 +14,11 @@ class Student:
         self.is_passed = "NO"
         self.honor = "?"
 
-    def addGrades(self, g):
-        self.gradez.append(g)
+    def add_grades(self, grade):
+        """
+            Add a grade to the student's record
+        """
+        self.gradez.append(grade)
 
     def calcaverage(self):
         t = 0
